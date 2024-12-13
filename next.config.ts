@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
+  // Disable server-side rendering for the entire application
+  ssr: false,
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+module.exports = nextConfig
 
-export default nextConfig;
